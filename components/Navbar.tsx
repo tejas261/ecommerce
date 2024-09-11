@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import logo from "../public/logo.png";
+import logo from "../public/logoo.png";
 import { Input } from "./ui/input";
 import { ShoppingCart, UserCircleIcon } from "lucide-react";
 
@@ -55,12 +55,12 @@ const components: {
 const Navbar = () => {
   return (
     <>
-      <div className="py-2 bg-black text-white">
+      <div className="py-3 bg-black text-white">
         <h1 className="text-center">
           Shop now to get additional 20% off on your cart value
         </h1>
       </div>
-      <div className="bg-white flex justify-around text-black">
+      <div className="bg-white flex justify-around text-black my-5">
         <Image src={logo} alt="logo" width={200} />
         <NavigationMenu>
           <NavigationMenuList>
