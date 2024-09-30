@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 import React from "react";
 import logo from "../public/logoo.png";
@@ -16,6 +18,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { Separator } from "./ui/separator";
 
 const components: {
   title: string;
@@ -55,11 +58,7 @@ const components: {
 const Navbar = () => {
   return (
     <>
-      <div className="py-3 bg-black text-white">
-        <h1 className="text-center">
-          Shop now to get additional 20% off on your cart value
-        </h1>
-      </div>
+      
       <div className="bg-white flex justify-around text-black my-5">
         <Image src={logo} alt="logo" width={200} />
         <NavigationMenu>
@@ -113,6 +112,7 @@ const Navbar = () => {
           <UserCircleIcon />
         </div>
       </div>
+      <Separator/>
     </>
   );
 };

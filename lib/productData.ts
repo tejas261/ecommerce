@@ -219,5 +219,4 @@ export const productData = [
       "Stylish Chelsea boots made from premium leather for a rugged look.",
     brand: "EliteFootwear",
   },
-  // Additional 34 products follow the same structure with variations in type (shirts, jackets, pants, shoes, watches, etc.)
 ];

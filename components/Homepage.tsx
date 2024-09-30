@@ -11,6 +11,7 @@ import brand5 from "../public/brands/brand-5.png";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { productData } from "@/lib/productData";
+import ProductCard from "./ProductCard";
 
 const Homepage = () => {
   return (
@@ -90,20 +91,12 @@ const Homepage = () => {
         <div className="grid grid-cols-4 place-items-center">
           {productData.slice(0, 4).map((product) => {
             return (
-              <div key={product.id} className="flex flex-col">
-                <img
-                  src={encodeURI("https://placehold.co/600x400")}
-                  alt={product.name}
-                  className="rounded-xl w-72 h-full"
-                />
-                <div>
-                  <h2 className="text-lg">{product.name}</h2>
-                  <h2>Ratings</h2>
-                  <p className="text-gray-500">
-                    &#8377;{Math.ceil(product.price * 10)}
-                  </p>
-                </div>
-              </div>
+              <ProductCard
+                key={product.id}
+                name={product.name}
+                id={product.id}
+                price={product.price}
+              />
             );
           })}
         </div>
@@ -120,20 +113,12 @@ const Homepage = () => {
         <div className="grid grid-cols-4 place-items-center">
           {productData.slice(5, 9).map((product) => {
             return (
-              <div key={product.id} className="flex flex-col">
-                <img
-                  src={encodeURI("https://placehold.co/600x400")}
-                  alt={product.name}
-                  className="rounded-xl w-72 h-full"
-                />
-                <div>
-                  <h2 className="text-lg">{product.name}</h2>
-                  <h2>Ratings</h2>
-                  <p className="text-gray-500">
-                    &#8377;{Math.ceil(product.price * 10)}
-                  </p>
-                </div>
-              </div>
+              <ProductCard
+                key={product.id}
+                name={product.name}
+                id={product.id}
+                price={product.price}
+              />
             );
           })}
         </div>
@@ -146,13 +131,23 @@ const Homepage = () => {
 
       {/* BROWSE BY STYLE */}
       <section className="rounded-2xl bg-gray-100 m-10">
-        <h1 className="text-center font-bold text-3xl py-16">BROWSE BY STYLE</h1>
+        <h1 className="text-center font-bold text-3xl py-16">
+          BROWSE BY STYLE
+        </h1>
         <div className="flex">
           <Image className="mx-2" src={style1} alt="style1" />
-          <Image className="w-full h-80 object-cover mx-2 rounded-2xl" src={style1} alt="style1" />
+          <Image
+            className="w-full h-80 object-cover mx-2 rounded-2xl"
+            src={style1}
+            alt="style1"
+          />
         </div>
         <div className="flex my-5">
-          <Image className="w-full h-80 object-cover rounded-2xl mx-2" src={style1} alt="style1" />
+          <Image
+            className="w-full h-80 object-cover rounded-2xl mx-2"
+            src={style1}
+            alt="style1"
+          />
           <Image className="mx-2" src={style1} alt="style1" />
         </div>
       </section>
